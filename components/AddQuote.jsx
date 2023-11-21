@@ -7,18 +7,20 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 
 const AddQuote = ({isVisible,onClose}) => {
 
+    const { data: session } = useSession()
+
+    const [title,setTitle]= useState("");
+    const [quote,setQuote]= useState("");
+
+
     if(!isVisible){
         return null;
     }
 
-    const { data: session } = useSession()
-
     console.log(session);
 
     const id=session?.user?.id
-    const [title,setTitle]= useState("");
-    const [quote,setQuote]= useState("");
-
+    
     console.log(title,quote);
 
     const showAlert = (t,i) => {
@@ -79,7 +81,7 @@ const AddQuote = ({isVisible,onClose}) => {
             
                 <div className='flex items-center py-2'>
                     <div className='text-purple-900 text-4xl font-semibold mb-2 text-center flex-grow'>Add Your Quote</div>
-                    <Image onClick={()=>onClose()} src={close} height={50} width={50} className='md:p-2 cursor-pointer'/>
+                    <Image onClick={()=>onClose()} src={close} height={50} width={50} className='md:p-2 cursor-pointer' alt='close'/>
                 </div>
                 <form onSubmit={handleSubmit} className='flex flex-col justify-center items-center py-2'>
                     <input

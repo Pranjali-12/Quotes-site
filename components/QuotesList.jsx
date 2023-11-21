@@ -49,7 +49,7 @@ const QuotesList = () => {
       <div className='my-3 sm:mx-20 text-white'>
         {
           quotes && Array.isArray(quotes) && quotes.length > 0 ? (quotes.map((item) => (
-            <Quote id={item.id} owner={item.owner} title={item.title} quote={item.quote} createdAt={item.createdAt} />
+            <Quote key={item.key} id={item.id} owner={item.owner} title={item.title} quote={item.quote} createdAt={item.createdAt} />
           ))) : (
             <div className='text-white text-center font-semibold text-2xl flex items-center justify-center'>
               {quotes == null ? 'There is no quote' : (<div role="status">

@@ -29,15 +29,15 @@ export const UserInfo = () => {
           
           {session?.user?.gender === "male" ? (
             <div className=''>
-              <Image src={male} height={70} width={70} />
+              <Image src={male} height={70} width={70} alt='male'/>
             </div>
           ) : session?.user?.gender === "female" ? (
             <div className=''>
-              <Image src={female} height={80} width={80} />
+              <Image src={female} height={80} width={80} alt='female'/>
             </div>
           ) : (
             <div className=''>
-              <Image src={user} height={80} width={80} />
+              <Image src={user} height={80} width={80} alt='user'/>
             </div>
           )}
 
@@ -53,7 +53,7 @@ export const UserInfo = () => {
         <div className='w-full sm:w-7/8'>
           <div className='flex my-3 sm:mx-20 text-white'>
             <div className='text-5xl font-semibold p-4 text-purple-400'> Add Your Quotes </div>
-            <Image onClick={() => setShowAdd(true)} src={add} height={70} width={70} className='md:p-2 mx-8 mt-5 animate-bounce cursor-pointer add-image' />
+            <Image onClick={() => setShowAdd(true)} src={add} height={70} width={70} alt='add' className='md:p-2 mx-8 mt-5 animate-bounce cursor-pointer add-image' />
           </div>
           <QuotesList />
         </div>

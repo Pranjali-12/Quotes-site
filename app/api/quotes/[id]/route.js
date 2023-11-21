@@ -1,3 +1,5 @@
+"use client"
+
 import { connectMongo } from '@/lib/mongodb';
 import Quote from '@/models/quotes';
 import { NextResponse } from 'next/server';

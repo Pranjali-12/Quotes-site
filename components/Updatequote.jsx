@@ -9,16 +9,16 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 
 const UpdateQuote = ({ id, oldTitle, oldQuote, isVisible, onClose }) => {
 
+    const router = useRouter()
+
+    const [title, setNewTitle] = useState(oldTitle)
+    const [quote, setNewQuote] = useState(oldQuote)
+
     if (!isVisible) {
         return null;
     }
 
     console.log(oldTitle)
-
-    const router = useRouter()
-
-    const [title, setNewTitle] = useState(oldTitle)
-    const [quote, setNewQuote] = useState(oldQuote)
 
     const showAlert = (t, i) => {
         Swal.fire({
@@ -67,7 +67,7 @@ const UpdateQuote = ({ id, oldTitle, oldQuote, isVisible, onClose }) => {
 
                 <div className='flex items-center py-2'>
                     <div className='text-purple-900 text-4xl font-semibold mb-2 text-center flex-grow'>Add Your Quote</div>
-                    <Image onClick={() => onClose()} src={close} height={50} width={50} className='md:p-2 cursor-pointer' />
+                    <Image onClick={() => onClose()} src={close} height={50} width={50} className='md:p-2 cursor-pointer' alt='close'/>
                 </div>
                 <form onSubmit={handleSubmit} className='flex flex-col justify-center items-center py-2'>
                     <input
