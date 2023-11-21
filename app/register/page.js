@@ -1,11 +1,12 @@
-import LoginForm from "@/components/LoginForm";
+import Register from "@/components/Register";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-import { authOptions } from "./api/auth/[...nextauth]/route";
+import { authOptions } from "../api/auth/[...nextauth]/route";
 
-export default async function Home() {
+export default async function Registermain() {
+
   const session=await getServerSession(authOptions)
-  console.log("Session: ",session)
+  console.log("Session",session);
 
   if(session){
     redirect('/dashboard')
@@ -13,8 +14,7 @@ export default async function Home() {
 
   return (
     <>
-      <LoginForm/>
+      <Register/>
     </>
   )
 }
-
