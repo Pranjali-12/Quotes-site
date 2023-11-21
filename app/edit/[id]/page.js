@@ -27,8 +27,11 @@ const getQuoteById=async(id)=>{
 
 export default function edit({ params }) {
 
-    const [showAdd, setShowAdd] = useState(true)
     const router=useRouter()
+
+    const [showAdd, setShowAdd] = useState(true)
+    const [quoteData, setQuoteData] = useState(null);
+    
 
     const handleClose = () => {
         setShowAdd(false);
@@ -36,10 +39,6 @@ export default function edit({ params }) {
     };
 
     const {id}=params
-
-    const [quoteData, setQuoteData] = useState(null);
-
-  
 
     useEffect(() => {
         const fetchQuoteData = async () => {
