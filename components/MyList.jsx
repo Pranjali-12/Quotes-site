@@ -13,7 +13,7 @@ import Link from 'next/link';
 const getAllQuotes = async (id) => {
     console.log(id)
     try {
-        const res = await fetch(`http://localhost:3000/api/mylist/${id}`, {
+        const res = await fetch(`api/mylist/${id}`, {
             cache: "no-store",
         });
 

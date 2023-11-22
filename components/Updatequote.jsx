@@ -34,7 +34,7 @@ const UpdateQuote = ({ id, oldTitle, oldQuote, isVisible, onClose }) => {
         e.preventDefault()
 
         try {
-            const res = await fetch(`http://localhost:3000/api/quotes/${id}`, {
+            const res = await fetch(`api/quotes/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json"

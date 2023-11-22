@@ -18,7 +18,7 @@ const Remove = ({ id }) => {
 
     const handleClick = async () => {
         try {
-            const res = await fetch(`http://localhost:3000/api/quotes?id=${id}`, {
+            const res = await fetch(`api/quotes?id=${id}`, {
                 method: "DELETE",
             })
 

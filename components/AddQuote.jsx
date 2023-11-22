@@ -40,7 +40,7 @@ const AddQuote = ({isVisible,onClose}) => {
         }
 
         try {
-            const res = await fetch("http://localhost:3000/api/quotes", {
+            const res = await fetch("api/quotes", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

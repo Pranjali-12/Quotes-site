@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 const getAllQuotes = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/quotes", {
+    const res = await fetch("api/quotes", {
       cache: "no-store",
     });
 
