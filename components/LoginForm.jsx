@@ -45,7 +45,7 @@ const LoginForm = () => {
 
             showAlert("Login Successfully", "success");
 
-            router.replace("dashboard")
+            router.push("/dashboard")
         } catch (error) {
             console.log(error)
         }
