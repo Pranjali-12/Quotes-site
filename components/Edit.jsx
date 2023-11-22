@@ -25,7 +25,7 @@ const getQuoteById=async(id)=>{
 
 }
 
-const Edit=({ params })=> {
+const Edit=({ id })=> {
 
     const router=useRouter()
 
@@ -38,7 +38,6 @@ const Edit=({ params })=> {
         router.push("/dashboard");
     };
 
-    const {id}=params
 
     useEffect(() => {
         const fetchQuoteData = async () => {

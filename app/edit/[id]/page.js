@@ -2,14 +2,15 @@
 
 import Edit from "@/components/Edit"
 
-const edit=({ params })=> {
+const edit=({params})=> {
 
+    const {id}=params;
 
     return (
         <>
-            <Edit/>
+            <Edit id={id}/>
         </>
     )
 }
 
-export default Edit
+export default edit
