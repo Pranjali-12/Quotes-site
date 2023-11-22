@@ -24,8 +24,7 @@ const UpdateQuote = ({ id, oldTitle, oldQuote, isVisible, onClose }) => {
         Swal.fire({
             title: t,
             icon: i,
-            showConfirmButton: false,
-            timer: 1500
+            confirmButtonText: 'OK'
         });
     };
 
@@ -46,7 +45,6 @@ const UpdateQuote = ({ id, oldTitle, oldQuote, isVisible, onClose }) => {
 
             if (res.ok) {
                 showAlert("Quote Updated Successfully", "success")
-                router.refresh();
                 router.push("/dashboard")
             }
             else {
