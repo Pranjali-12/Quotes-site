@@ -68,7 +68,7 @@ const Register = () => {
         <div className="text-white flex items-center justify-center h-screen">
             <div className="py-10 text-white bg-slate-800 w-[90%] sm:w-[80%] md:w-[60%] lg:w-[40%] xl:w-[30%] shadow-lg rounded-lg text-center">
                 <div className="flex items-center justify-center mb-4">
-                    <Image src={quotes} height={80} width={80} />
+                    <Image src={quotes} height={80} width={80} alt="quotes"/>
                 </div>
                 <div className="text-3xl font-semibold">Register</div>
 

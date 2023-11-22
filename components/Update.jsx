@@ -8,7 +8,7 @@ const Update = ({id}) => {
   return (
     <>
     <Link href={`/edit/${id}`}>
-        <Image src={edit} height={53} width={53} className='md:p-2 cursor-pointer mobile-image'/>
+        <Image src={edit} height={53} width={53} className='md:p-2 cursor-pointer mobile-image' alt='update'/>
     </Link>
     </>
   )

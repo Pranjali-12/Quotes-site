@@ -44,7 +44,7 @@ const Remove = ({ id }) => {
     }
 
     return (
-        <Image onClick={() => handleClick()} src={del} height={53} width={53} className='md:p-2 cursor-pointer mobile-image' />
+        <Image onClick={() => handleClick()} src={del} height={53} width={53} className='md:p-2 cursor-pointer mobile-image'alt='remove' />
     )
 }
 

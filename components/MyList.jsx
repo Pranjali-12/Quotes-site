@@ -66,15 +66,15 @@ const MyList = () => {
                     <Link href={"/dashboard"} className='mb-5 py-2 text-center text-purple-700 bg-slate-200 rounded-lg font-semibold w-32 text-xl'>Back</Link>
                     {session?.user?.gender === "male" ? (
                         <div className=''>
-                            <Image src={male} height={70} width={70} />
+                            <Image src={male} height={70} width={70} alt='male'/>
                         </div>
                     ) : session?.user?.gender === "female" ? (
                         <div className=''>
-                            <Image src={female} height={80} width={80} />
+                            <Image src={female} height={80} width={80} alt='female' />
                         </div>
                     ) : (
                         <div className=''>
-                            <Image src={user} height={80} width={80} />
+                            <Image src={user} height={80} width={80} alt='user'/>
                         </div>
                     )}
 
