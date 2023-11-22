@@ -1,5 +1,3 @@
-"use client"
-
 import { connectMongo } from '@/lib/mongodb';
 import Quote from '@/models/quotes';
 import { NextResponse } from 'next/server';
@@ -41,11 +39,17 @@ export async function PUT(req, { params }) {
 
 export async function GET(req,{ params }) {
     try {
+
+      console.log("Hello")
         const { id } = params;
+
+        console.log(id);
 
         await connectMongo()
 
         const quote = await Quote.findOne({ _id: id })
+
+        console.log(quote)
 
         if (quote) {
             return NextResponse.json(quote, { status: 200 });

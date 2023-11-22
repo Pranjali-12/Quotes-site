@@ -25,7 +25,7 @@ const getQuoteById=async(id)=>{
 
 }
 
-export default function edit({ params }) {
+const Edit=({ params })=> {
 
     const router=useRouter()
 
@@ -74,3 +74,5 @@ export default function edit({ params }) {
         </>
     )
 }
+
+export default Edit
