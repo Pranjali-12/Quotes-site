@@ -43,9 +43,17 @@ const UpdateQuote = ({ id, oldTitle, oldQuote, isVisible, onClose }) => {
                 })
             })
 
+
             if (res.ok) {
-                showAlert("Quote Updated Successfully", "success")
-                router.push("/dashboard")
+                Swal.fire({
+                    title: "Quote updated successfully",
+                    icon: "success",
+                    confirmButtonText: 'OK'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        router.push("/dashboard")
+                    }
+                });
             }
             else {
                 showAlert("Try again", "warning")
