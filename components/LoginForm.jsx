@@ -34,7 +34,7 @@ const LoginForm = () => {
             const res = await signIn("credentials", {
                 email,
                 password,
-                // redirect: false
+                redirect: false
             });
 
 
@@ -43,9 +43,11 @@ const LoginForm = () => {
                 return;
             }
 
-            showAlert("Login Successfully", "success");
+            if(res.ok){
+                showAlert("Login Successfully", "success");
+                router.push("/dashboard")
+            }
 
-            router.push("/dashboard")
         } catch (error) {
             console.log(error)
         }
