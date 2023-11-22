@@ -34,7 +34,7 @@ const LoginForm = () => {
             const res = await signIn("credentials", {
                 email,
                 password,
-                redirect: false
+                // redirect: false
             });
 
 
