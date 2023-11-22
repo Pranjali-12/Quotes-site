@@ -72,7 +72,7 @@ const UpdateQuote = ({ id, oldTitle, oldQuote, isVisible, onClose }) => {
             <div className='bg-purple-400 p-5 flex flex-col justify-center rounded-lg sm:w-[50%] w-[80%] custom-add-quote'>
 
                 <div className='flex items-center py-2'>
-                    <div className='text-purple-900 text-4xl font-semibold mb-2 text-center flex-grow'>Add Your Quote</div>
+                    <div className='text-purple-900 text-4xl font-semibold mb-2 text-center flex-grow'>Update Your Quote</div>
                     <Image onClick={() => onClose()} src={close} height={50} width={50} className='md:p-2 cursor-pointer' alt='close'/>
                 </div>
                 <form onSubmit={handleSubmit} className='flex flex-col justify-center items-center py-2'>
