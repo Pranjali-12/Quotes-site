@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation'
 const getQuoteById=async(id)=>{
 
     try {
-        const res = await fetch(`api/quotes/${id}`, {
+        const res = await fetch(`/api/quotes/${id}`, {
            cache:"no-store"
         })
 
