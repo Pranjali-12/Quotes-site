@@ -70,7 +70,8 @@ export const authOptions = {
   secret: process.env.NEXTAUTH_SECRET,
   pages: {
     signIn: "/",
-  }
+  },
+  site: process.env.NEXTAUTH_URL
 };
 
 const handler = NextAuth(authOptions);
